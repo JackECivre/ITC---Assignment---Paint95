@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Paint</title>
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <nav>
+
+        </nav>
+
+        <div class="sidemenu">
+            <div class="sidemenuTop">
+                <div id="clear" class="props" onclick="remove()">Clean</div>
+                <h3>Sizes</h3>
+                <div>
+                    <div class="props" onclick="size = '50'">X-Large</div>
+                    <div class="props" onclick="size ='20'">Large</div>
+                    <div class="props" onclick="size ='10'">Medium</div>
+                    <div class="props" onclick="size ='5'">Small</div>
+                </div>
+                <h3>Shapes</h3>
+                <div>
+                    <div class="props" onclick="radius ='0'">Square</div>
+                    <div class="props" onclick="radius ='250'">Round</div>
+                </div>
+            </div>
+
+            <div class="sidemenuBottom">
+                <div id="colors">
+                    <button id="white" onclick="color = 'white'" class="coloring">ERASER</button>
+                    <button id="black" onclick="color = 'black'" class="coloring"></button>
+                    <button id="red" onclick="color = 'red'" class="coloring"></button>
+                    <button id="green" onclick="color = 'green'" class="coloring"></button>
+                    <button id="blue" onclick="color = 'blue'" class="coloring"></button>
+                    <button id="cyan" onclick="color = 'cyan'" class="coloring"></button>
+                    <button id="magenta" onclick="color = 'magenta'" class="coloring"></button>
+                    <button id="yellow" onclick="color = 'yellow'" class="coloring"></button>
+                    <input type="color" onclick="color= value" value="#ffffff" id="colorSelector" class="coloring"
+                        width="48" height="48">
+                </div>
+            </div>
+        </div>
+
+
+        <div class="canvas-wrapper">
+            <div class="canvasClass" id="canvas"></div>
+
+        </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="./js/main.js"></script>
+</body>
+
+</html>
