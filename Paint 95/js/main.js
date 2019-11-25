@@ -16,19 +16,25 @@ document.getElementById('canvas').addEventListener("mousedown", function (e) {
             dot.style.border = color + " 1px"
             dot.style.borderRadius = radius + "px";
             dot.style.backgroundColor = color
-
-
-
-            this.appendChild(dot);
+            dot.addEventListener("mousemove", function (e) {
+                e.stopPropagation();
+            });
+            document.getElementById('canvas').appendChild(dot);
         }
-        document.getElementById('clear').addEventListener('click', function remove() {
-            document.getElementById("canvas").removeChild(dot)
-        });
 
     }
-
 });
-document.getElementById('canvas').addEventListener("mouseup", function (e) {
+document.getElementById('clear').addEventListener('click', clearCanvas)
+
+function clearCanvas() {
+    let canvas = document.getElementById('canvas');
+    while (canvas.firstChild){
+        canvas.removeChild(canvas.firstChild);
+    }
+}
+document.getElementById('container').addEventListener("mouseup", function (e) {
     pressedMouse = false;
 });
 
+let canvas = document.getElementById('canvas')
+canvas.getBoundingClientRect

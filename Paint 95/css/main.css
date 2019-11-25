@@ -7,7 +7,7 @@ html {
   margin: 0px;
 }
 
-.container {
+#container {
   display:flex;
   justify-content: space-evenly;
   overflow: hidden;
@@ -141,9 +141,14 @@ h3{
 
 .canvas-wrapper{
   border: 2.5px solid black;
+  color: white;
+  padding: 1px;
   margin: 10px;
   width: 750px;
-  height: 750px;    
+  height: 750px;
+  overflow: hidden;
+  z-index: 123;
+  
 }
 
 
@@ -152,6 +157,8 @@ h3{
   height: 750px;
   margin-bottom: 1px;
   background-color: white;
+  overflow: hidden;
+  z-index: 1;
   
 }
 
@@ -160,6 +167,9 @@ h3{
   width: 5px;
   height: 5px;
   background-color: black;
+  z-index: 12;
+  transform: translate(-50%,-50%)
+  
 }
 
 .selected{
